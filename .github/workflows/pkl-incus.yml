@@ -16,13 +16,22 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
+      - uses: pkl-community/setup-pkl@v0
+        with:
+          pkl-version: 0.31.1
+      - uses: actions/checkout@v7
+        with:
+          repository: Agence-Fluor/pkl-nix-tools
+          ref: pkl-nix-tools@0.1.0
+          path: .ci/pkl-nix-tools
+      - run: echo "$GITHUB_WORKSPACE/.ci/pkl-nix-tools" >> "$GITHUB_PATH"
       - name: Check generated specifications and package import
         run: >-
-          nix --extra-experimental-features 'nix-command flakes' develop .
+          ./flake.pkl develop
           --command sh -c 'python3 scripts/gen-incus-pkl.py --check && sh scripts/test-package.sh'
       - name: Build the publishable Pkl package
         run: >-
-          nix --extra-experimental-features 'nix-command flakes' develop .
+          ./flake.pkl develop
           --command sh scripts/package-pkl.sh dist/package
       - uses: actions/upload-artifact@v7
         with:
@@ -39,6 +48,15 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
+      - uses: pkl-community/setup-pkl@v0
+        with:
+          pkl-version: 0.31.1
+      - uses: actions/checkout@v7
+        with:
+          repository: Agence-Fluor/pkl-nix-tools
+          ref: pkl-nix-tools@0.1.0
+          path: .ci/pkl-nix-tools
+      - run: echo "$GITHUB_WORKSPACE/.ci/pkl-nix-tools" >> "$GITHUB_PATH"
       - uses: actions/download-artifact@v8
         with:
           name: incus-pkl-package
@@ -47,7 +65,7 @@ jobs:
         env:
           TAG: ${{ github.ref_name }}
         run: |
-          version=$(nix --extra-experimental-features 'nix-command flakes' develop . --command pkl eval --no-project -x 'package.version' PklProject)
+          version=$(./flake.pkl develop --command pkl eval --no-project -x 'package.version' PklProject)
           test "$TAG" = "incus-pkl@$version"
       - name: Publish Pkl package assets
         env:

@@ -45,10 +45,12 @@ consumer needs a narrower import.
 
 ## Develop and package
 
-The development shell provides Pkl, Python, PyYAML, and curl:
+The executable `flake.pkl` uses the published `pkl-nix` schema and the
+`pkl-nix-tools` wrapper on `PATH`. The development shell provides Pkl, Python,
+PyYAML, and curl:
 
 ```sh
-nix develop
+./flake.pkl develop
 python3 scripts/gen-incus-pkl.py --check
 sh scripts/test-package.sh
 sh scripts/package-pkl.sh
