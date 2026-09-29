@@ -1,0 +1,1537 @@
+{
+  "AccessEntry": [
+    "identifier",
+    "provider",
+    "role"
+  ],
+  "BackupTarget": [
+    "access_key",
+    "bucket_name",
+    "path",
+    "protocol",
+    "secret_key",
+    "url"
+  ],
+  "Certificate": [
+    "certificate",
+    "description",
+    "fingerprint",
+    "name",
+    "projects",
+    "restricted",
+    "type"
+  ],
+  "CertificateAddToken": [
+    "addresses",
+    "client_name",
+    "expires_at",
+    "fingerprint",
+    "secret"
+  ],
+  "CertificatePut": [
+    "certificate",
+    "description",
+    "name",
+    "projects",
+    "restricted",
+    "type"
+  ],
+  "CertificatesPost": [
+    "certificate",
+    "description",
+    "name",
+    "projects",
+    "restricted",
+    "token",
+    "trust_token",
+    "type"
+  ],
+  "Cluster": [
+    "enabled",
+    "member_config",
+    "server_name"
+  ],
+  "ClusterCertificatePut": [
+    "cluster_certificate",
+    "cluster_certificate_key"
+  ],
+  "ClusterGroup": [
+    "config",
+    "description",
+    "members",
+    "name",
+    "used_by"
+  ],
+  "ClusterGroupPost": [
+    "name"
+  ],
+  "ClusterGroupPut": [
+    "config",
+    "description",
+    "members"
+  ],
+  "ClusterGroupsPost": [
+    "config",
+    "description",
+    "members",
+    "name"
+  ],
+  "ClusterMember": [
+    "architecture",
+    "config",
+    "database",
+    "description",
+    "failure_domain",
+    "groups",
+    "message",
+    "roles",
+    "server_name",
+    "status",
+    "url"
+  ],
+  "ClusterMemberConfigKey": [
+    "description",
+    "entity",
+    "key",
+    "name",
+    "value"
+  ],
+  "ClusterMemberJoinToken": [
+    "addresses",
+    "expires_at",
+    "fingerprint",
+    "secret",
+    "server_name"
+  ],
+  "ClusterMemberPost": [
+    "server_name"
+  ],
+  "ClusterMemberPut": [
+    "config",
+    "description",
+    "failure_domain",
+    "groups",
+    "roles"
+  ],
+  "ClusterMemberState": [
+    "storage_pools",
+    "sysinfo"
+  ],
+  "ClusterMemberStatePost": [
+    "action",
+    "mode"
+  ],
+  "ClusterMemberSysInfo": [
+    "buffered_ram",
+    "free_ram",
+    "free_swap",
+    "load_averages",
+    "processes",
+    "shared_ram",
+    "total_ram",
+    "total_swap",
+    "uptime"
+  ],
+  "ClusterMembersPost": [
+    "server_name"
+  ],
+  "ClusterPut": [
+    "cluster_address",
+    "cluster_certificate",
+    "cluster_token",
+    "enabled",
+    "member_config",
+    "server_address",
+    "server_name"
+  ],
+  "Event": [
+    "location",
+    "metadata",
+    "project",
+    "timestamp",
+    "type"
+  ],
+  "Image": [
+    "aliases",
+    "architecture",
+    "auto_update",
+    "cached",
+    "created_at",
+    "expires_at",
+    "filename",
+    "fingerprint",
+    "last_used_at",
+    "profiles",
+    "project",
+    "properties",
+    "public",
+    "size",
+    "type",
+    "update_source",
+    "uploaded_at"
+  ],
+  "ImageAlias": [
+    "description",
+    "name"
+  ],
+  "ImageAliasesEntry": [
+    "description",
+    "name",
+    "target",
+    "type"
+  ],
+  "ImageAliasesEntryPost": [
+    "name"
+  ],
+  "ImageAliasesEntryPut": [
+    "description",
+    "target"
+  ],
+  "ImageAliasesPost": [
+    "description",
+    "name",
+    "target",
+    "type"
+  ],
+  "ImageExportPost": [
+    "aliases",
+    "certificate",
+    "profiles",
+    "project",
+    "secret",
+    "target"
+  ],
+  "ImageMetadata": [
+    "architecture",
+    "creation_date",
+    "expiry_date",
+    "properties",
+    "templates"
+  ],
+  "ImageMetadataTemplate": [
+    "create_only",
+    "gid",
+    "mode",
+    "properties",
+    "template",
+    "uid",
+    "when"
+  ],
+  "ImagePut": [
+    "auto_update",
+    "expires_at",
+    "profiles",
+    "properties",
+    "public"
+  ],
+  "ImageSource": [
+    "alias",
+    "certificate",
+    "image_type",
+    "protocol",
+    "server"
+  ],
+  "ImagesPost": [
+    "aliases",
+    "auto_update",
+    "compression_algorithm",
+    "expires_at",
+    "filename",
+    "format",
+    "profiles",
+    "properties",
+    "public",
+    "source"
+  ],
+  "ImagesPostSource": [
+    "alias",
+    "certificate",
+    "fingerprint",
+    "image_type",
+    "mode",
+    "name",
+    "project",
+    "protocol",
+    "secret",
+    "server",
+    "type",
+    "url"
+  ],
+  "InitClusterPreseed": [
+    "cluster_address",
+    "cluster_certificate",
+    "cluster_certificate_path",
+    "cluster_token",
+    "enabled",
+    "member_config",
+    "server_address",
+    "server_name"
+  ],
+  "InitLocalPreseed": [
+    "certificates",
+    "cluster_groups",
+    "config",
+    "networks",
+    "profiles",
+    "projects",
+    "storage_pools",
+    "storage_volumes"
+  ],
+  "InitNetworksProjectPost": [
+    "config",
+    "description",
+    "name",
+    "project",
+    "type"
+  ],
+  "InitPreseed": [
+    "certificates",
+    "cluster",
+    "cluster_groups",
+    "config",
+    "networks",
+    "profiles",
+    "projects",
+    "storage_pools",
+    "storage_volumes"
+  ],
+  "InitProfileProjectPost": [
+    "config",
+    "description",
+    "devices",
+    "name",
+    "project"
+  ],
+  "InitStorageVolumesProjectPost": [
+    "config",
+    "content_type",
+    "description",
+    "name",
+    "pool",
+    "project",
+    "restore",
+    "source",
+    "type"
+  ],
+  "Instance": [
+    "architecture",
+    "config",
+    "created_at",
+    "description",
+    "devices",
+    "disk_only",
+    "ephemeral",
+    "expanded_config",
+    "expanded_devices",
+    "last_used_at",
+    "location",
+    "name",
+    "profiles",
+    "project",
+    "restore",
+    "stateful",
+    "status",
+    "status_code",
+    "type"
+  ],
+  "InstanceBackup": [
+    "created_at",
+    "expires_at",
+    "instance_only",
+    "name",
+    "optimized_storage"
+  ],
+  "InstanceBackupPost": [
+    "name"
+  ],
+  "InstanceBackupsPost": [
+    "compression_algorithm",
+    "expires_at",
+    "instance_only",
+    "name",
+    "optimized_storage",
+    "root_only",
+    "target"
+  ],
+  "InstanceConsolePost": [
+    "force",
+    "height",
+    "type",
+    "width"
+  ],
+  "InstanceDebugRepairPost": [
+    "action"
+  ],
+  "InstanceExecPost": [
+    "command",
+    "cwd",
+    "environment",
+    "group",
+    "height",
+    "interactive",
+    "record-output",
+    "user",
+    "wait-for-websocket",
+    "width"
+  ],
+  "InstanceFull": [
+    "architecture",
+    "backups",
+    "config",
+    "created_at",
+    "description",
+    "devices",
+    "disk_only",
+    "ephemeral",
+    "expanded_config",
+    "expanded_devices",
+    "last_used_at",
+    "location",
+    "name",
+    "profiles",
+    "project",
+    "restore",
+    "snapshots",
+    "state",
+    "stateful",
+    "status",
+    "status_code",
+    "type"
+  ],
+  "InstancePost": [
+    "Config",
+    "Devices",
+    "Profiles",
+    "allow_inconsistent",
+    "instance_only",
+    "live",
+    "migration",
+    "name",
+    "pool",
+    "project",
+    "target"
+  ],
+  "InstancePostTarget": [
+    "certificate",
+    "operation",
+    "secrets"
+  ],
+  "InstancePut": [
+    "architecture",
+    "config",
+    "description",
+    "devices",
+    "disk_only",
+    "ephemeral",
+    "profiles",
+    "restore",
+    "stateful"
+  ],
+  "InstanceRebuildPost": [
+    "source"
+  ],
+  "InstanceSnapshot": [
+    "architecture",
+    "config",
+    "created_at",
+    "description",
+    "devices",
+    "ephemeral",
+    "expanded_config",
+    "expanded_devices",
+    "expires_at",
+    "last_used_at",
+    "name",
+    "profiles",
+    "size",
+    "stateful"
+  ],
+  "InstanceSnapshotPost": [
+    "live",
+    "migration",
+    "name",
+    "target"
+  ],
+  "InstanceSnapshotPut": [
+    "expires_at"
+  ],
+  "InstanceSnapshotsPost": [
+    "expires_at",
+    "name",
+    "stateful"
+  ],
+  "InstanceSource": [
+    "alias",
+    "allow_inconsistent",
+    "base-image",
+    "certificate",
+    "fingerprint",
+    "instance_only",
+    "live",
+    "mode",
+    "operation",
+    "project",
+    "properties",
+    "protocol",
+    "refresh",
+    "refresh_exclude_older",
+    "secret",
+    "secrets",
+    "server",
+    "source",
+    "type"
+  ],
+  "InstanceState": [
+    "cpu",
+    "disk",
+    "memory",
+    "network",
+    "os_info",
+    "pid",
+    "processes",
+    "started_at",
+    "status",
+    "status_code"
+  ],
+  "InstanceStateCPU": [
+    "allocated_time",
+    "usage"
+  ],
+  "InstanceStateDisk": [
+    "total",
+    "usage"
+  ],
+  "InstanceStateMemory": [
+    "swap_usage",
+    "swap_usage_peak",
+    "total",
+    "usage",
+    "usage_peak"
+  ],
+  "InstanceStateNetwork": [
+    "addresses",
+    "counters",
+    "host_name",
+    "hwaddr",
+    "mtu",
+    "state",
+    "type"
+  ],
+  "InstanceStateNetworkAddress": [
+    "address",
+    "family",
+    "netmask",
+    "scope"
+  ],
+  "InstanceStateNetworkCounters": [
+    "bytes_received",
+    "bytes_sent",
+    "errors_received",
+    "errors_sent",
+    "packets_dropped_inbound",
+    "packets_dropped_outbound",
+    "packets_received",
+    "packets_sent"
+  ],
+  "InstanceStateOSInfo": [
+    "fqdn",
+    "hostname",
+    "kernel_version",
+    "os",
+    "os_version"
+  ],
+  "InstanceStatePut": [
+    "action",
+    "force",
+    "stateful",
+    "timeout"
+  ],
+  "InstancesPost": [
+    "architecture",
+    "config",
+    "description",
+    "devices",
+    "disk_only",
+    "ephemeral",
+    "instance_type",
+    "name",
+    "profiles",
+    "restore",
+    "source",
+    "start",
+    "stateful",
+    "type"
+  ],
+  "InstancesPut": [
+    "state"
+  ],
+  "MetadataConfig": [],
+  "MetadataConfigGroup": [
+    "keys"
+  ],
+  "MetadataConfigKey": [
+    "condition",
+    "defaultdesc",
+    "liveupdate",
+    "longdesc",
+    "scope",
+    "shortdesc",
+    "type"
+  ],
+  "MetadataConfiguration": [
+    "configs"
+  ],
+  "Network": [
+    "config",
+    "description",
+    "locations",
+    "managed",
+    "name",
+    "project",
+    "status",
+    "type",
+    "used_by"
+  ],
+  "NetworkACL": [
+    "config",
+    "description",
+    "egress",
+    "ingress",
+    "name",
+    "project",
+    "used_by"
+  ],
+  "NetworkACLPost": [
+    "name"
+  ],
+  "NetworkACLPut": [
+    "config",
+    "description",
+    "egress",
+    "ingress"
+  ],
+  "NetworkACLRule": [
+    "action",
+    "description",
+    "destination",
+    "destination_port",
+    "icmp_code",
+    "icmp_type",
+    "protocol",
+    "source",
+    "source_port",
+    "state"
+  ],
+  "NetworkACLsPost": [
+    "config",
+    "description",
+    "egress",
+    "ingress",
+    "name"
+  ],
+  "NetworkAddressSet": [
+    "addresses",
+    "config",
+    "description",
+    "name",
+    "project",
+    "used_by"
+  ],
+  "NetworkAddressSetPost": [
+    "name"
+  ],
+  "NetworkAddressSetPut": [
+    "addresses",
+    "config",
+    "description"
+  ],
+  "NetworkAddressSetsPost": [
+    "addresses",
+    "config",
+    "description",
+    "name"
+  ],
+  "NetworkAllocations": [
+    "addresses",
+    "hwaddr",
+    "nat",
+    "type",
+    "used_by"
+  ],
+  "NetworkForward": [
+    "config",
+    "description",
+    "listen_address",
+    "location",
+    "ports"
+  ],
+  "NetworkForwardPort": [
+    "description",
+    "listen_port",
+    "protocol",
+    "snat",
+    "target_address",
+    "target_port"
+  ],
+  "NetworkForwardPut": [
+    "config",
+    "description",
+    "ports"
+  ],
+  "NetworkForwardsPost": [
+    "config",
+    "description",
+    "listen_address",
+    "ports"
+  ],
+  "NetworkIntegration": [
+    "config",
+    "description",
+    "name",
+    "type",
+    "used_by"
+  ],
+  "NetworkIntegrationPost": [
+    "name"
+  ],
+  "NetworkIntegrationPut": [
+    "config",
+    "description"
+  ],
+  "NetworkIntegrationsPost": [
+    "config",
+    "description",
+    "name",
+    "type"
+  ],
+  "NetworkLease": [
+    "address",
+    "hostname",
+    "hwaddr",
+    "location",
+    "type"
+  ],
+  "NetworkLoadBalancer": [
+    "backends",
+    "config",
+    "description",
+    "listen_address",
+    "location",
+    "ports"
+  ],
+  "NetworkLoadBalancerBackend": [
+    "description",
+    "name",
+    "target_address",
+    "target_port"
+  ],
+  "NetworkLoadBalancerPort": [
+    "description",
+    "listen_port",
+    "protocol",
+    "target_backend"
+  ],
+  "NetworkLoadBalancerPut": [
+    "backends",
+    "config",
+    "description",
+    "ports"
+  ],
+  "NetworkLoadBalancerState": [
+    "backend_health"
+  ],
+  "NetworkLoadBalancerStateBackendHealth": [
+    "address",
+    "ports"
+  ],
+  "NetworkLoadBalancerStateBackendHealthPort": [
+    "port",
+    "protocol",
+    "status"
+  ],
+  "NetworkLoadBalancersPost": [
+    "backends",
+    "config",
+    "description",
+    "listen_address",
+    "ports"
+  ],
+  "NetworkPeer": [
+    "config",
+    "description",
+    "name",
+    "status",
+    "target_integration",
+    "target_network",
+    "target_project",
+    "type",
+    "used_by"
+  ],
+  "NetworkPeerPut": [
+    "config",
+    "description"
+  ],
+  "NetworkPeersPost": [
+    "config",
+    "description",
+    "name",
+    "target_integration",
+    "target_network",
+    "target_project",
+    "type"
+  ],
+  "NetworkPost": [
+    "name"
+  ],
+  "NetworkPut": [
+    "config",
+    "description"
+  ],
+  "NetworkState": [
+    "addresses",
+    "bond",
+    "bridge",
+    "counters",
+    "hwaddr",
+    "mtu",
+    "ovn",
+    "state",
+    "type",
+    "vlan"
+  ],
+  "NetworkStateAddress": [
+    "address",
+    "family",
+    "netmask",
+    "scope"
+  ],
+  "NetworkStateBond": [
+    "down_delay",
+    "lower_devices",
+    "mii_frequency",
+    "mii_state",
+    "mode",
+    "transmit_policy",
+    "up_delay"
+  ],
+  "NetworkStateBridge": [
+    "forward_delay",
+    "id",
+    "stp",
+    "upper_devices",
+    "vlan_default",
+    "vlan_filtering"
+  ],
+  "NetworkStateCounters": [
+    "bytes_received",
+    "bytes_sent",
+    "packets_received",
+    "packets_sent"
+  ],
+  "NetworkStateOVN": [
+    "chassis",
+    "logical_router",
+    "logical_switch",
+    "uplink_ipv4",
+    "uplink_ipv6"
+  ],
+  "NetworkStateVLAN": [
+    "lower_device",
+    "vid"
+  ],
+  "NetworkZone": [
+    "config",
+    "description",
+    "name",
+    "project",
+    "used_by"
+  ],
+  "NetworkZonePut": [
+    "config",
+    "description"
+  ],
+  "NetworkZoneRecord": [
+    "config",
+    "description",
+    "entries",
+    "name"
+  ],
+  "NetworkZoneRecordEntry": [
+    "ttl",
+    "type",
+    "value"
+  ],
+  "NetworkZoneRecordPut": [
+    "config",
+    "description",
+    "entries"
+  ],
+  "NetworkZoneRecordsPost": [
+    "config",
+    "description",
+    "entries",
+    "name"
+  ],
+  "NetworkZonesPost": [
+    "config",
+    "description",
+    "name"
+  ],
+  "NetworksPost": [
+    "config",
+    "description",
+    "name",
+    "type"
+  ],
+  "Operation": [
+    "class",
+    "created_at",
+    "description",
+    "err",
+    "id",
+    "location",
+    "may_cancel",
+    "metadata",
+    "resources",
+    "status",
+    "status_code",
+    "updated_at"
+  ],
+  "Profile": [
+    "config",
+    "description",
+    "devices",
+    "name",
+    "project",
+    "used_by"
+  ],
+  "ProfilePost": [
+    "name"
+  ],
+  "ProfilePut": [
+    "config",
+    "description",
+    "devices"
+  ],
+  "ProfilesPost": [
+    "config",
+    "description",
+    "devices",
+    "name"
+  ],
+  "Project": [
+    "config",
+    "description",
+    "name",
+    "used_by"
+  ],
+  "ProjectPost": [
+    "name"
+  ],
+  "ProjectPut": [
+    "config",
+    "description"
+  ],
+  "ProjectState": [
+    "resources"
+  ],
+  "ProjectStateResource": [
+    "Limit",
+    "Usage"
+  ],
+  "ProjectsPost": [
+    "config",
+    "description",
+    "name"
+  ],
+  "Resources": [
+    "cpu",
+    "gpu",
+    "load",
+    "memory",
+    "network",
+    "pci",
+    "serial",
+    "storage",
+    "system",
+    "usb"
+  ],
+  "ResourcesCPU": [
+    "architecture",
+    "sockets",
+    "total"
+  ],
+  "ResourcesCPUAddressSizes": [
+    "physical_bits",
+    "virtual_bits"
+  ],
+  "ResourcesCPUCache": [
+    "level",
+    "size",
+    "type"
+  ],
+  "ResourcesCPUCore": [
+    "core",
+    "die",
+    "flags",
+    "frequency",
+    "threads"
+  ],
+  "ResourcesCPUSocket": [
+    "address_sizes",
+    "cache",
+    "cores",
+    "frequency",
+    "frequency_minimum",
+    "frequency_turbo",
+    "name",
+    "socket",
+    "vendor"
+  ],
+  "ResourcesCPUThread": [
+    "id",
+    "isolated",
+    "numa_node",
+    "online",
+    "thread"
+  ],
+  "ResourcesGPU": [
+    "cards",
+    "total"
+  ],
+  "ResourcesGPUCard": [
+    "driver",
+    "driver_version",
+    "drm",
+    "mdev",
+    "numa_node",
+    "nvidia",
+    "pci_address",
+    "product",
+    "product_id",
+    "sriov",
+    "usb_address",
+    "vendor",
+    "vendor_id"
+  ],
+  "ResourcesGPUCardDRM": [
+    "card_device",
+    "card_name",
+    "control_device",
+    "control_name",
+    "id",
+    "render_device",
+    "render_name"
+  ],
+  "ResourcesGPUCardMdev": [
+    "api",
+    "available",
+    "description",
+    "devices",
+    "name"
+  ],
+  "ResourcesGPUCardNvidia": [
+    "architecture",
+    "brand",
+    "card_device",
+    "card_name",
+    "cuda_version",
+    "model",
+    "nvrm_version",
+    "uuid"
+  ],
+  "ResourcesGPUCardSRIOV": [
+    "current_vfs",
+    "maximum_vfs",
+    "vfs"
+  ],
+  "ResourcesLoad": [
+    "Average10Min",
+    "Average1Min",
+    "Average5Min",
+    "Processes"
+  ],
+  "ResourcesMemory": [
+    "hugepages_size",
+    "hugepages_total",
+    "hugepages_used",
+    "nodes",
+    "total",
+    "used"
+  ],
+  "ResourcesMemoryNode": [
+    "hugepages_total",
+    "hugepages_used",
+    "numa_node",
+    "total",
+    "used"
+  ],
+  "ResourcesNetwork": [
+    "cards",
+    "total"
+  ],
+  "ResourcesNetworkCard": [
+    "driver",
+    "driver_version",
+    "firmware_version",
+    "numa_node",
+    "pci_address",
+    "ports",
+    "product",
+    "product_id",
+    "sriov",
+    "usb_address",
+    "vdpa",
+    "vendor",
+    "vendor_id"
+  ],
+  "ResourcesNetworkCardPort": [
+    "address",
+    "auto_negotiation",
+    "id",
+    "infiniband",
+    "link_detected",
+    "link_duplex",
+    "link_speed",
+    "port",
+    "port_type",
+    "protocol",
+    "supported_modes",
+    "supported_ports",
+    "transceiver_type"
+  ],
+  "ResourcesNetworkCardPortInfiniband": [
+    "issm_device",
+    "issm_name",
+    "mad_device",
+    "mad_name",
+    "verb_device",
+    "verb_name"
+  ],
+  "ResourcesNetworkCardSRIOV": [
+    "current_vfs",
+    "maximum_vfs",
+    "vfs"
+  ],
+  "ResourcesNetworkCardVDPA": [
+    "device",
+    "name"
+  ],
+  "ResourcesPCI": [
+    "devices",
+    "total"
+  ],
+  "ResourcesPCIDevice": [
+    "driver",
+    "driver_version",
+    "iommu_group",
+    "numa_node",
+    "pci_address",
+    "product",
+    "product_id",
+    "vendor",
+    "vendor_id",
+    "vpd"
+  ],
+  "ResourcesPCIVPD": [
+    "entries",
+    "product_name"
+  ],
+  "ResourcesSerial": [
+    "devices",
+    "total"
+  ],
+  "ResourcesSerialDevice": [
+    "device",
+    "device_id",
+    "device_path",
+    "driver",
+    "id",
+    "product",
+    "product_id",
+    "vendor",
+    "vendor_id"
+  ],
+  "ResourcesStorage": [
+    "disks",
+    "total"
+  ],
+  "ResourcesStorageDisk": [
+    "block_size",
+    "device",
+    "device_id",
+    "device_path",
+    "firmware_version",
+    "id",
+    "model",
+    "numa_node",
+    "partitions",
+    "pci_address",
+    "read_only",
+    "removable",
+    "rpm",
+    "serial",
+    "size",
+    "type",
+    "usb_address",
+    "wwn"
+  ],
+  "ResourcesStorageDiskPartition": [
+    "device",
+    "id",
+    "partition",
+    "read_only",
+    "size"
+  ],
+  "ResourcesStoragePool": [
+    "inodes",
+    "space"
+  ],
+  "ResourcesStoragePoolInodes": [
+    "total",
+    "used"
+  ],
+  "ResourcesStoragePoolSpace": [
+    "total",
+    "used"
+  ],
+  "ResourcesSystem": [
+    "chassis",
+    "family",
+    "firmware",
+    "motherboard",
+    "product",
+    "serial",
+    "sku",
+    "type",
+    "uuid",
+    "vendor",
+    "version"
+  ],
+  "ResourcesSystemChassis": [
+    "serial",
+    "type",
+    "vendor",
+    "version"
+  ],
+  "ResourcesSystemFirmware": [
+    "date",
+    "vendor",
+    "version"
+  ],
+  "ResourcesSystemMotherboard": [
+    "product",
+    "serial",
+    "vendor",
+    "version"
+  ],
+  "ResourcesUSB": [
+    "devices",
+    "total"
+  ],
+  "ResourcesUSBDevice": [
+    "bus_address",
+    "device_address",
+    "interfaces",
+    "product",
+    "product_id",
+    "serial",
+    "speed",
+    "vendor",
+    "vendor_id"
+  ],
+  "ResourcesUSBDeviceInterface": [
+    "class",
+    "class_id",
+    "driver",
+    "driver_version",
+    "number",
+    "subclass",
+    "subclass_id"
+  ],
+  "Server": [
+    "api_extensions",
+    "api_status",
+    "api_version",
+    "auth",
+    "auth_methods",
+    "auth_user_method",
+    "auth_user_name",
+    "config",
+    "environment",
+    "public"
+  ],
+  "ServerEnvironment": [
+    "addresses",
+    "architectures",
+    "certificate",
+    "certificate_fingerprint",
+    "driver",
+    "driver_version",
+    "firewall",
+    "kernel",
+    "kernel_architecture",
+    "kernel_features",
+    "kernel_version",
+    "lxc_features",
+    "os_name",
+    "os_version",
+    "project",
+    "server",
+    "server_clustered",
+    "server_event_mode",
+    "server_name",
+    "server_pid",
+    "server_version",
+    "storage",
+    "storage_supported_drivers",
+    "storage_version"
+  ],
+  "ServerPut": [
+    "config"
+  ],
+  "ServerStorageDriverInfo": [
+    "Name",
+    "Remote",
+    "Version"
+  ],
+  "ServerUntrusted": [
+    "api_extensions",
+    "api_status",
+    "api_version",
+    "auth",
+    "auth_methods",
+    "config",
+    "public"
+  ],
+  "StorageBucket": [
+    "config",
+    "description",
+    "location",
+    "name",
+    "project",
+    "s3_url"
+  ],
+  "StorageBucketBackup": [
+    "created_at",
+    "expires_at",
+    "name"
+  ],
+  "StorageBucketBackupPost": [
+    "name"
+  ],
+  "StorageBucketBackupsPost": [
+    "compression_algorithm",
+    "expires_at",
+    "name"
+  ],
+  "StorageBucketFull": [
+    "backups",
+    "config",
+    "description",
+    "keys",
+    "location",
+    "name",
+    "project",
+    "s3_url"
+  ],
+  "StorageBucketKey": [
+    "access-key",
+    "description",
+    "name",
+    "role",
+    "secret-key"
+  ],
+  "StorageBucketKeyPut": [
+    "access-key",
+    "description",
+    "role",
+    "secret-key"
+  ],
+  "StorageBucketKeysPost": [
+    "access-key",
+    "description",
+    "name",
+    "role",
+    "secret-key"
+  ],
+  "StorageBucketPut": [
+    "config",
+    "description"
+  ],
+  "StorageBucketsPost": [
+    "config",
+    "description",
+    "name"
+  ],
+  "StoragePool": [
+    "config",
+    "description",
+    "driver",
+    "locations",
+    "name",
+    "status",
+    "used_by"
+  ],
+  "StoragePoolPut": [
+    "config",
+    "description"
+  ],
+  "StoragePoolState": [
+    "inodes",
+    "space"
+  ],
+  "StoragePoolsPost": [
+    "config",
+    "description",
+    "driver",
+    "name"
+  ],
+  "StorageVolume": [
+    "config",
+    "content_type",
+    "created_at",
+    "description",
+    "location",
+    "name",
+    "project",
+    "restore",
+    "type",
+    "used_by"
+  ],
+  "StorageVolumeBackup": [
+    "created_at",
+    "expires_at",
+    "name",
+    "optimized_storage",
+    "volume_only"
+  ],
+  "StorageVolumeBackupPost": [
+    "name"
+  ],
+  "StorageVolumeBackupsPost": [
+    "compression_algorithm",
+    "expires_at",
+    "name",
+    "optimized_storage",
+    "target",
+    "volume_only"
+  ],
+  "StorageVolumeBitmap": [
+    "busy",
+    "count",
+    "granularity",
+    "inconsistent",
+    "name",
+    "persistent",
+    "recording"
+  ],
+  "StorageVolumeBitmapsPost": [
+    "disabled",
+    "granularity",
+    "name",
+    "persistent"
+  ],
+  "StorageVolumeFull": [
+    "backups",
+    "config",
+    "content_type",
+    "created_at",
+    "description",
+    "location",
+    "name",
+    "project",
+    "restore",
+    "snapshots",
+    "state",
+    "type",
+    "used_by"
+  ],
+  "StorageVolumePost": [
+    "migration",
+    "name",
+    "pool",
+    "project",
+    "source",
+    "target",
+    "volume_only"
+  ],
+  "StorageVolumePostTarget": [
+    "certificate",
+    "operation",
+    "secrets"
+  ],
+  "StorageVolumePut": [
+    "config",
+    "description",
+    "restore"
+  ],
+  "StorageVolumeRebuildPost": [],
+  "StorageVolumeSnapshot": [
+    "config",
+    "content_type",
+    "created_at",
+    "description",
+    "expires_at",
+    "name"
+  ],
+  "StorageVolumeSnapshotPost": [
+    "migration",
+    "name",
+    "target"
+  ],
+  "StorageVolumeSnapshotPut": [
+    "description",
+    "expires_at"
+  ],
+  "StorageVolumeSnapshotsPost": [
+    "expires_at",
+    "name"
+  ],
+  "StorageVolumeSource": [
+    "certificate",
+    "location",
+    "mode",
+    "name",
+    "operation",
+    "pool",
+    "project",
+    "refresh",
+    "refresh_exclude_older",
+    "secrets",
+    "type",
+    "volume_only"
+  ],
+  "StorageVolumeState": [
+    "usage"
+  ],
+  "StorageVolumeStateUsage": [
+    "total",
+    "used"
+  ],
+  "StorageVolumesPost": [
+    "config",
+    "content_type",
+    "description",
+    "name",
+    "restore",
+    "source",
+    "type"
+  ],
+  "Warning": [
+    "count",
+    "entity_url",
+    "first_seen_at",
+    "last_message",
+    "last_seen_at",
+    "location",
+    "project",
+    "severity",
+    "status",
+    "type",
+    "uuid"
+  ],
+  "WarningPut": [
+    "status"
+  ]
+}

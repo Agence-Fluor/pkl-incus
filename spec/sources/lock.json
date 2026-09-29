@@ -1,0 +1,13 @@
+{
+  "ref": "v7.0.1",
+  "sources": {
+    "configuration.json": {
+      "sha256": "5862c97678f78a5ef9c3ebaf5ffcefd60de22003e656cc15ac3b86c5e64c781e",
+      "url": "https://raw.githubusercontent.com/lxc/incus/v7.0.1/internal/server/metadata/configuration.json"
+    },
+    "rest-api.yaml": {
+      "sha256": "7b4e07375da92f30e7eadf766f1bbdf40bf9968ee305a16be1afe5998e72e91f",
+      "url": "https://raw.githubusercontent.com/lxc/incus/v7.0.1/doc/rest-api.yaml"
+    }
+  }
+}

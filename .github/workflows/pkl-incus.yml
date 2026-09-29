@@ -1,0 +1,63 @@
+name: Incus Pkl package
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["incus-pkl@*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: cachix/install-nix-action@v31
+      - name: Check generated specifications and package import
+        run: >-
+          nix --extra-experimental-features 'nix-command flakes' develop .
+          --command sh -c 'python3 scripts/gen-incus-pkl.py --check && sh scripts/test-package.sh'
+      - name: Build the publishable Pkl package
+        run: >-
+          nix --extra-experimental-features 'nix-command flakes' develop .
+          --command sh scripts/package-pkl.sh dist/package
+      - uses: actions/upload-artifact@v7
+        with:
+          name: incus-pkl-package
+          path: dist/package/*
+          if-no-files-found: error
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/incus-pkl@')
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: cachix/install-nix-action@v31
+      - uses: actions/download-artifact@v8
+        with:
+          name: incus-pkl-package
+          path: dist/package
+      - name: Verify tag matches package version
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version=$(nix --extra-experimental-features 'nix-command flakes' develop . --command pkl eval --no-project -x 'package.version' PklProject)
+          test "$TAG" = "incus-pkl@$version"
+      - name: Publish Pkl package assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          version=${TAG#incus-pkl@}
+          gh release create "$TAG" \
+            "dist/package/incus-pkl@$version" \
+            "dist/package/incus-pkl@$version.sha256" \
+            "dist/package/incus-pkl@$version.zip" \
+            "dist/package/incus-pkl@$version.zip.sha256" \
+            --verify-tag --generate-notes
