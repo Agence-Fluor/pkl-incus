@@ -45,12 +45,12 @@ consumer needs a narrower import.
 
 ## Develop and package
 
-The executable `flake.pkl` uses the published `pkl-nix` schema and the
-`pkl-nix-tools` wrapper on `PATH`. The development shell provides Pkl, Python,
+The executable `flake.pkl` renders Nix through Pkl. The `pkl-nix-tools`
+command on `PATH` runs Nix using this flake. The development shell provides Pkl, Python,
 PyYAML, and curl:
 
 ```sh
-./flake.pkl develop
+pkl-nix-tools develop
 python3 scripts/gen-incus-pkl.py --check
 sh scripts/test-package.sh
 sh scripts/package-pkl.sh
@@ -80,4 +80,6 @@ python3 scripts/gen-incus-pkl.py --download --ref vX.Y.Z
 ```
 
 The CI publishes package metadata and the ZIP as a GitHub release on tags named
-`incus-pkl@<version>`. Update `version` in `PklProject` before creating the tag.
+`incus-pkl@<version>`. Update `version` in `PklProject`, commit it, then use
+`git tag "$(sh scripts/release-tag.sh)"` and push that tag. The package name
+is `incus-pkl`, even though the repository is named `pkl-incus`.
