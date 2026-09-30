@@ -14,17 +14,17 @@ local systems = List("x86_64-linux", "aarch64-linux", "x86_64-darwin", "aarch64-
 devShells {
   for (system in systems) {
     [system] {
-      ["default"] = new Nix.Raw {
-        code =
-          """
-          let
-            pkgs = inputs.nixpkgs.legacyPackages.\(system);
-            python = pkgs.python3.withPackages (packages: [ packages.pyyaml ]);
-          in
-          pkgs.mkShell {
-            packages = [ pkgs.pkl python pkgs.curl pkgs.unzip ];
+      ["default"] = new Nix.MkShell {
+        pkgs = new Nix.Ref { path = "inputs.nixpkgs.legacyPackages.\(system)" }
+        packages {
+          "pkl"
+          new Nix.WithPackages {
+            target = new Nix.Ref { path = "pkgs.python3" }
+            packages { "pyyaml" }
           }
-          """
+          "curl"
+          "unzip"
+        }
       }
     }
   }

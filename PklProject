@@ -3,13 +3,14 @@ amends "pkl:Project"
 package {
   name = "incus-pkl"
   baseUri = "package://pkg.pkl-lang.org/github.com/Agence-Fluor/pkl-incus/incus-pkl"
-  version = "0.1.1"
-  packageZipUrl = "https://github.com/Agence-Fluor/pkl-incus/releases/download/incus-pkl@\(version)/incus-pkl@\(version).zip"
+  version = "0.1.2"
+  packageZipUrl =
+    "https://github.com/Agence-Fluor/pkl-incus/releases/download/incus-pkl@\(version)/incus-pkl@\(version).zip"
   sourceCode = "https://github.com/Agence-Fluor/pkl-incus"
 }
 
 dependencies {
   ["nix"] {
-    uri = "package://pkg.pkl-lang.org/github.com/Agence-Fluor/pkl-nix/pkl-nix@0.1.1"
+    uri = "package://pkg.pkl-lang.org/github.com/Agence-Fluor/pkl-nix/pkl-nix@0.1.2"
   }
 }
