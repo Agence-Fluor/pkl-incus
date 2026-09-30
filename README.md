@@ -47,15 +47,22 @@ consumer needs a narrower import.
 
 The executable `flake.pkl` runs Nix through
 [`pkl-nix-tools`](https://github.com/Agence-Fluor/pkl-nix-tools#démarrer),
-loaded from the project’s pinned `nixTools` Pkl dependency. No global wrapper installation is needed. Use `pkl eval flake.pkl` to render Nix only. The development shell provides Pkl, Python,
-PyYAML, and curl:
+loaded directly from the project’s pinned `nixTools` Pkl dependency. Start
+with Bash 4+, Pkl 0.31.1+, and Nix with Flakes installed. Pkl loads the
+launcher on each invocation; the generated Nix is cached in `.pkl-nix-tools/`.
+Use `pkl eval flake.pkl` to render Nix only. The development shell provides
+Pkl, Python, PyYAML, curl, and unzip:
 
 ```sh
+pkl project resolve
 ./flake.pkl develop
 python3 scripts/gen-incus-pkl.py --check
 sh scripts/test-package.sh
 sh scripts/package-pkl.sh
 ```
+
+Commit `PklProject.deps.json` after changing and resolving dependencies.
+The launcher requires no global installation or project-local Bash script.
 
 `package-pkl.sh` stages `PklProject`, `Incus.pkl`, and the API/options Pkl modules
 before calling `pkl project package`. The published ZIP contains only the Pkl
