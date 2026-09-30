@@ -46,8 +46,8 @@ consumer needs a narrower import.
 ## Develop and package
 
 The executable `flake.pkl` runs Nix through
-[`pkl-nix-tools`](https://github.com/Agence-Fluor/pkl-nix-tools#installer-depuis-pkl),
-which must be installed on `PATH`. Use `pkl eval flake.pkl` to render Nix only. The development shell provides Pkl, Python,
+[`pkl-nix-tools`](https://github.com/Agence-Fluor/pkl-nix-tools#démarrer),
+loaded from the project’s pinned `nixTools` Pkl dependency. No global wrapper installation is needed. Use `pkl eval flake.pkl` to render Nix only. The development shell provides Pkl, Python,
 PyYAML, and curl:
 
 ```sh
