@@ -18,7 +18,7 @@ amends "pkl:Project"
 
 dependencies {
   ["incus"] {
-    uri = "package://pkg.pkl-lang.org/github.com/Agence-Fluor/pkl-incus/incus-pkl@0.1.0"
+    uri = "package://pkg.pkl-lang.org/github.com/Agence-Fluor/pkl-incus/incus-pkl@0.1.1"
   }
 }
 ```
