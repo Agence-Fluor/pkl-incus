@@ -45,12 +45,13 @@ consumer needs a narrower import.
 
 ## Develop and package
 
-The executable `flake.pkl` renders Nix through Pkl. The `pkl-nix-tools`
-command on `PATH` runs Nix using this flake. The development shell provides Pkl, Python,
+The executable `flake.pkl` runs Nix through
+[`pkl-nix-tools`](https://github.com/Agence-Fluor/pkl-nix-tools#installer-depuis-pkl),
+which must be installed on `PATH`. Use `pkl eval flake.pkl` to render Nix only. The development shell provides Pkl, Python,
 PyYAML, and curl:
 
 ```sh
-pkl-nix-tools develop
+./flake.pkl develop
 python3 scripts/gen-incus-pkl.py --check
 sh scripts/test-package.sh
 sh scripts/package-pkl.sh
